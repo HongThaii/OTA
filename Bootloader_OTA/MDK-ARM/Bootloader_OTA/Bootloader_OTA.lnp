@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"bootloader_ota\startup_stm32f103xb.o"
+"bootloader_ota\main.o"
+"bootloader_ota\stm32f1xx_it.o"
+"bootloader_ota\stm32f1xx_hal_msp.o"
+"bootloader_ota\stm32f1xx_hal_gpio_ex.o"
+"bootloader_ota\stm32f1xx_hal_tim.o"
+"bootloader_ota\stm32f1xx_hal_tim_ex.o"
+"bootloader_ota\stm32f1xx_hal_uart.o"
+"bootloader_ota\stm32f1xx_hal.o"
+"bootloader_ota\stm32f1xx_hal_rcc.o"
+"bootloader_ota\stm32f1xx_hal_rcc_ex.o"
+"bootloader_ota\stm32f1xx_hal_gpio.o"
+"bootloader_ota\stm32f1xx_hal_dma.o"
+"bootloader_ota\stm32f1xx_hal_cortex.o"
+"bootloader_ota\stm32f1xx_hal_pwr.o"
+"bootloader_ota\stm32f1xx_hal_flash.o"
+"bootloader_ota\stm32f1xx_hal_flash_ex.o"
+"bootloader_ota\stm32f1xx_hal_exti.o"
+"bootloader_ota\system_stm32f1xx.o"
+"bootloader_ota\flash.o"
+"bootloader_ota\button.o"
+--strict --scatter "Bootloader_OTA\Bootloader_OTA.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Bootloader_OTA.map" -o Bootloader_OTA\Bootloader_OTA.axf
